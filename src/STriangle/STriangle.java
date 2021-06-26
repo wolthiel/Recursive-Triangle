@@ -25,9 +25,11 @@ public class STriangle {
 	}
 	
 	private static void drawTriangles() {
-		Dimension frameSize = frame.getSize();
 		frame.add(new SPanel());
 		frame.setVisible(true);
 	}
-	
+	public static Dimension frameSize() {
+		Dimension returnDimension = frame.getSize();
+		return returnDimension;
+	}
 }
