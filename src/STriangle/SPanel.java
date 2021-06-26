@@ -8,7 +8,7 @@ import java.awt.Polygon;
 import java.util.Map;
 import java.awt.Toolkit;
 
-public class SPanel extends Panel {
+public class SPanel extends Panel{
 	private static int maxDepth = 8;
 	private static Color[] colors = {new Color(0x172A3A), new Color(0x004346), new Color(0x508991), new Color(0x74B3CE), new Color(0x09BC8A), new Color(0x1FF4FF)};
 	
@@ -29,9 +29,10 @@ public class SPanel extends Panel {
 	}
 	
 	public void paint(Graphics g) {
-		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		int w = screenSize.width;
-		int h = screenSize.height;
+		// Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		Dimension frameSize = STriangle.frameSize();
+		int w = frameSize.width; //screenSize.width;
+		int h = frameSize.height;//screenSize.height;
 		int i = 0;
 		drawing(g,w,h,i);
 	}
